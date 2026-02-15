@@ -24,11 +24,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="config.py" />
-    <Compile Include="database\db.py" />
+    <Compile Include="database\connection.py" />
     <Compile Include="handlers\broadcast.py" />
+    <Compile Include="handlers\reminders.py" />
     <Compile Include="handlers\start.py" />
     <Compile Include="keyboards\admin.py" />
+    <Compile Include="loader.py" />
     <Compile Include="main.py" />
+    <Compile Include="repositories\reminder_repo.py" />
+    <Compile Include="repositories\user_repo.py" />
+    <Compile Include="scheduler\reminder_scheduler.py" />
+    <Compile Include="services\reminder_service.py" />
+    <Compile Include="services\user_service.py" />
+    <Compile Include="states\broadcast_state.py" />
+    <Compile Include="states\reminder_state.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".env" />
@@ -37,6 +46,10 @@
     <Folder Include="database\" />
     <Folder Include="handlers\" />
     <Folder Include="keyboards\" />
+    <Folder Include="states\" />
+    <Folder Include="scheduler\" />
+    <Folder Include="repositories\" />
+    <Folder Include="services\" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.13" />
